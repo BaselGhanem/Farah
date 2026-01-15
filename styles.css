@@ -1,0 +1,83 @@
+
+/* Base Configuration */
+:root {
+  --obsidian: #0c0a09;
+  --rose: #fb7185;
+  --rose-dark: #e11d48;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Navigation Spacing */
+#about, #experience, #skills, #contact, #hero {
+  scroll-margin-top: 100px;
+}
+
+/* Visual Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 241, 241, 0.08);
+}
+
+.glass-card {
+  background: rgba(41, 37, 36, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 63, 94, 0.1);
+}
+
+.aura-1 {
+  background: radial-gradient(circle, rgba(251, 113, 133, 0.1) 0%, transparent 70%);
+}
+
+.aura-2 {
+  background: radial-gradient(circle, rgba(120, 113, 108, 0.1) 0%, transparent 70%);
+}
+
+.btn-shimmer {
+  background: linear-gradient(110deg, #fb7185 45%, #fda4af 50%, #fb7185 55%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+.animate-bounce-slow {
+  animation: bounce 4s infinite;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--obsidian);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #44403c;
+  border-radius: 10px;
+}
+
+/* Navbar active state */
+.nav-scrolled {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.nav-links-scrolled {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 241, 241, 0.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}

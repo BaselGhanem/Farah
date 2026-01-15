@@ -4,71 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farah Abu-Asbeh | HR Executive</title>
+    <title>Farah Abu-Asbeh | HR Strategy & Relations</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0c0a09;
-        color: #f5f5f4;
-      }
-      /* Applies to the wrapper divs in App.tsx */
-      #hero, #about, #experience, #skills, #contact {
-        scroll-margin-top: 100px;
-      }
-      .font-display {
-        font-family: 'Cormorant Garamond', serif;
-      }
-      .glass {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 241, 241, 0.08);
-      }
-      .glass-card {
-        background: rgba(41, 37, 36, 0.4);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(244, 63, 94, 0.1);
-      }
-      .aura-1 {
-        background: radial-gradient(circle, rgba(251, 113, 133, 0.1) 0%, transparent 70%);
-      }
-      .aura-2 {
-        background: radial-gradient(circle, rgba(120, 113, 108, 0.1) 0%, transparent 70%);
-      }
-      .btn-shimmer {
-        background: linear-gradient(110deg, #fb7185 45%, #fda4af 50%, #fb7185 55%);
-        background-size: 200% 100%;
-        animation: shimmer 3s infinite linear;
-      }
-      @keyframes shimmer {
-        to { background-position: -200% 0; }
-      }
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 4px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: #0c0a09;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #44403c;
-        border-radius: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
-<body class="overflow-x-hidden custom-scrollbar">
-    <div id="root"></div>
+<body class="bg-[#0c0a09] text-[#f5f5f4] overflow-x-hidden custom-scrollbar">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 pointer-events-none -z-10">
+        <div class="aura-1 absolute -top-[10%] -left-[10%] w-[60%] h-[60%] opacity-40"></div>
+        <div class="aura-2 absolute bottom-[10%] -right-[10%] w-[50%] h-[50%] opacity-30"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-8">
+        <div class="container mx-auto px-6 md:px-10 flex justify-between items-center">
+            <a href="#hero" class="font-display italic text-3xl tracking-tight text-white hover:text-rose-400 transition-colors">
+                F<span class="text-rose-500">.</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 items-center px-8 py-3 rounded-full transition-all duration-500 nav-links-container">
+                <a href="#about" class="text-[10px] font-semibold tracking-[0.2em] uppercase text-stone-400 hover:text-rose-400 transition-colors">About</a>
+                <a href="#experience" class="text-[10px] font-semibold tracking-[0.2em] uppercase text-stone-400 hover:text-rose-400 transition-colors">Experience</a>
+                <a href="#skills" class="text-[10px] font-semibold tracking-[0.2em] uppercase text-stone-400 hover:text-rose-400 transition-colors">Skills</a>
+                <a href="#contact" class="text-[10px] font-semibold tracking-[0.2em] uppercase text-stone-400 hover:text-rose-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+               <div class="h-8 w-px bg-stone-800 hidden sm:block"></div>
+               <a href="https://linkedin.com/in/farah-abu-asbeh" target="_blank" class="text-stone-400 hover:text-rose-400 p-2">
+                 <i class="fa-brands fa-linkedin-in text-sm"></i>
+               </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="text-center lg:text-left z-10">
+                    <span class="inline-block text-rose-500 text-[10px] font-bold uppercase tracking-[0.4em] mb-6 animate-pulse">HR Strategy & Relations</span>
+                    <h1 class="font-display text-6xl md:text-8xl lg:text-9xl leading-[0.85] mb-10 text-stone-100">
+                        Curating <br />
+                        <span class="italic font-light text-rose-300">Potential.</span>
+                    </h1>
+                    <p class="text-stone-400 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl">
+                        Specializing in the intersection of organizational culture and operational excellence. 
+                        Bridging gaps with strategic insight and empathy.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-8">
+                        <a href="#experience" class="btn-shimmer px-10 py-4 text-stone-900 rounded-full text-xs font-bold tracking-[0.2em] uppercase transition-transform hover:scale-105">View Journey</a>
+                        <a href="#contact" class="group flex items-center gap-4 text-xs font-bold tracking-[0.2em] uppercase text-stone-100">
+                            Let's Talk 
+                            <div class="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center group-hover:border-rose-500 transition-colors">
+                               <i class="fas fa-chevron-right text-[10px]"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 p-4">
+                        <div class="aspect-[4/5] rounded-[40px] overflow-hidden border border-rose-500/10 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+                            <img src="https://raw.githubusercontent.com/PortfolioGate/FarahAbuAsbah/refs/heads/main/Screenshot%202026-01-11%20144756.png" alt="Farah Abu-Asbeh" class="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-1000">
+                        </div>
+                        <div class="absolute -bottom-10 -left-10 glass-card p-6 rounded-3xl border-rose-500/20 max-w-[200px] hidden md:block animate-bounce-slow">
+                           <p class="font-display italic text-2xl text-rose-200">Executive Experience</p>
+                           <p class="text-[10px] uppercase tracking-widest text-stone-500 mt-2 font-bold">Amman, Jordan</p>
+                        </div>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-rose-900/5 blur-[100px] -z-10 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 border-y border-stone-900">
+                <div class="p-10 text-center lg:border-r lg:border-stone-900">
+                    <div class="font-display text-5xl mb-2 text-rose-300">05</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] font-bold text-stone-500 mb-1">Strategic Years</div>
+                    <div class="text-[10px] italic text-stone-600">Experience</div>
+                </div>
+                <div class="p-10 text-center lg:border-r lg:border-stone-900">
+                    <div class="font-display text-5xl mb-2 text-rose-300">100</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] font-bold text-stone-500 mb-1">Process Control</div>
+                    <div class="text-[10px] italic text-stone-600">Compliance</div>
+                </div>
+                <div class="p-10 text-center lg:border-r lg:border-stone-900">
+                    <div class="font-display text-5xl mb-2 text-rose-300">02</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] font-bold text-stone-500 mb-1">Leadership</div>
+                    <div class="text-[10px] italic text-stone-600">Senior Roles</div>
+                </div>
+                <div class="p-10 text-center">
+                    <div class="font-display text-5xl mb-2 text-rose-300">15+</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] font-bold text-stone-500 mb-1">Curated Skills</div>
+                    <div class="text-[10px] italic text-stone-600">Competencies</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-32 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-20">
+                    <span class="text-rose-500 text-[10px] font-bold uppercase tracking-[0.3em]">01. Profile</span>
+                    <h2 class="font-display text-5xl md:text-6xl text-stone-100 mt-4 italic">Philosophy & <br/>Approach</h2>
+                </div>
+                <div class="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+                    <div class="aspect-square glass rounded-full flex items-center justify-center p-12 border-rose-500/10">
+                       <i class="fas fa-feather-pointed text-4xl text-rose-400/30"></i>
+                    </div>
+                    <div class="space-y-8">
+                        <p class="text-2xl font-display leading-relaxed text-stone-200">
+                            A dynamic <span class="text-rose-400 italic">HR Professional</span> dedicated to harmonizing human needs with corporate objectives. I view Human Resources as an art of <span class="underline decoration-rose-500/30 underline-offset-8">facilitation and empowerment</span>.
+                        </p>
+                        <p class="text-stone-400 leading-relaxed font-light">
+                            From meticulously managing the employee lifecycle to navigating complex Jordanian labor laws, my career has been defined by a commitment to integrity and precision. Whether it's administering payroll or mediating workplace relations, I prioritize clarity and human-centric outcomes.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <span class="text-[9px] uppercase tracking-widest font-bold text-stone-500 border border-stone-800 px-4 py-2 rounded-full">Talent Acquisition</span>
+                            <span class="text-[9px] uppercase tracking-widest font-bold text-stone-500 border border-stone-800 px-4 py-2 rounded-full">Regulatory Compliance</span>
+                            <span class="text-[9px] uppercase tracking-widest font-bold text-stone-500 border border-stone-800 px-4 py-2 rounded-full">Cultural Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-32 bg-stone-900/20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-20 flex justify-between items-end">
+                    <div>
+                        <span class="text-rose-500 text-[10px] font-bold uppercase tracking-[0.3em]">02. Career</span>
+                        <h2 class="font-display text-5xl text-stone-100 mt-4 italic">The Journey</h2>
+                    </div>
+                    <div class="text-stone-700 font-display italic text-2xl hidden md:block">Est. 2018</div>
+                </div>
+                <div class="space-y-0" id="experience-list">
+                    <!-- Dynamic Experience injection -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-rose-500 text-[10px] font-bold uppercase tracking-[0.3em]">03. Competencies</span>
+                <h2 class="font-display text-5xl text-stone-100 mt-4 italic">Curated Expertise</h2>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-px bg-stone-900 border border-stone-900 rounded-[40px] overflow-hidden" id="skills-grid">
+                <!-- Dynamic Skills injection -->
+            </div>
+            <div class="mt-20 flex flex-wrap justify-center gap-12 py-10 glass-card rounded-full border-rose-500/5 px-10">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-check text-[10px] text-rose-500"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400">PHRi Certified</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-check text-[10px] text-rose-500"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400">B.Sc. English Lit</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-check text-[10px] text-rose-500"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400">Safety Supervisor L2</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-check text-[10px] text-rose-500"></i>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400">Labor Specialist</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="relative py-40 bg-[#0c0a09]">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-20">
+                <span class="text-rose-500 text-[10px] font-bold uppercase tracking-[0.4em] block mb-6">Contact</span>
+                <h2 class="font-display text-6xl md:text-8xl text-stone-100 italic mb-8">Let's Connect.</h2>
+                <div class="flex items-center justify-center gap-3 text-stone-500 mb-12">
+                   <span class="text-[10px] uppercase tracking-widest font-bold">Amman, Jordan</span>
+                   <div class="w-1 h-1 rounded-full bg-stone-800"></div>
+                   <span id="local-time" class="text-[10px] uppercase tracking-widest font-bold">Loading AST...</span>
+                </div>
+                <div class="flex flex-col items-center gap-6">
+                    <button id="copy-email" class="text-2xl md:text-4xl font-display text-stone-300 hover:text-rose-400 transition-colors relative break-all px-4">
+                        farahasbeh@yahoo.com
+                        <span id="copy-toast" class="absolute -top-10 left-1/2 -translate-x-1/2 text-[10px] bg-rose-500 text-white px-3 py-1 rounded-full uppercase tracking-widest opacity-0 transition-opacity pointer-events-none">Saved to clipboard</span>
+                    </button>
+                    <div class="h-px w-24 bg-stone-800"></div>
+                    <a href="https://linkedin.com/in/farah-abu-asbeh" target="_blank" class="text-xs font-bold uppercase tracking-[0.3em] text-stone-500 hover:text-white transition-colors">LinkedIn Profile</a>
+                </div>
+            </div>
+            <div class="pt-20 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-8">
+               <div class="font-display italic text-2xl text-stone-400">Farah Abu-Asbeh</div>
+               <p class="text-[9px] uppercase tracking-[0.2em] text-stone-600 font-bold">&copy; 2025 All Rights Reserved</p>
+               <a href="#hero" class="w-12 h-12 rounded-full border border-stone-900 flex items-center justify-center hover:bg-rose-500/10 hover:border-rose-500/30 transition-all">
+                  <i class="fas fa-arrow-up text-[10px] text-stone-500"></i>
+               </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Resume Button -->
+    <a href="https://raw.githubusercontent.com/PortfolioGate/FarahAbuAsbah/main/Farah%20Abu-Asbeh.pdf" target="_blank" id="floating-cv" class="fixed bottom-10 right-10 z-50 glass-card px-6 py-3 rounded-full flex items-center gap-3 transition-all duration-700 opacity-0 translate-y-20 hover:scale-105 group">
+        <span class="text-xs font-medium tracking-widest uppercase">Resume</span>
+        <div class="w-6 h-6 rounded-full bg-rose-500/20 flex items-center justify-center group-hover:bg-rose-500 transition-colors">
+          <i class="fas fa-arrow-down text-[10px] text-rose-200"></i>
+        </div>
+    </a>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
